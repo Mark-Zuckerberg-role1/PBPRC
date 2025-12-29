@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Interactive Bible - PBPRC</title>
+        <link rel="stylesheet" href="assets/css/main.css" />
+          <link rel="stylesheet" href="assets/css/responsive.css" />
+          </head>
+          <body>
+
+            <!-- NAVBAR -->
+              <nav class="navbar">
+                  <h1 class="logo">Precious Believers Prayer & Revival Center</h1>
+                      <ul class="nav-links">
+                            <li><a href="index.html">Home</a></li>
+                                  <li><a href="ministries.html">Ministries</a></li>
+                                        <li><a href="sermons.html">Sermons</a></li>
+                                              <li><a href="blog.html">Blog</a></li>
+                                                    <li><a href="contact.html">Contact</a></li>
+                                                          <li><a href="donate.html" class="donate-btn">Donate</a></li>
+                                                              </ul>
+                                                                </nav>
+
+                                                                  <!-- INTERACTIVE BIBLE SECTION -->
+                                                                    <section class="bible-section">
+                                                                        <h2>Interactive Bible</h2>
+                                                                            <p>Search for any book, chapter, or verse. Example: John 3:16</p>
+
+                                                                                <div class="bible-container">
+                                                                                      <input type="text" id="bible-search" placeholder="Type a passage (e.g., John 3:16)" />
+
+                                                                                            <div id="bible-content">
+                                                                                                    <p>Welcome! Type a passage above to begin reading Scripture.</p>
+                                                                                                          </div>
+                                                                                                              </div>
+                                                                                                                </section>
+
+                                                                                                                  <!-- FOOTER -->
+                                                                                                                    <footer class="footer">
+                                                                                                                        <p>&copy; 2025 PBPRC. All Rights Reserved.</p>
+                                                                                                                          
+                                                                                                                              </footer>
+
+                                                                                                                                <!-- SCRIPT FOR INTERACTIVE BIBLE -->
+                                                                                                                                  <script>
+                                                                                                                                    const searchInput = document.getElementById("bible-search");
+                                                                                                                                    const contentDiv = document.getElementById("bible-content");
+
+                                                                                                                                    searchInput.addEventListener("input", async () => {
+                                                                                                                                    	  const query = searchInput.value.trim();
+                                                                                                                                    	    if (!query) {
+                                                                                                                                    	    	    contentDiv.innerHTML = "<p>Type a passage (e.g., John 3:16) to read Scripture.</p>";
+                                                                                                                                    	    	        return;
+                                                                                                                                    	    	          }
+
+                                                                                                                                    	    	            const url = `https://bible-api.com/${encodeURIComponent(query)}`;
+
+                                                                                                                                    	    	              try {
+                                                                                                                                    	    	              	    const response = await fetch(url);
+                                                                                                                                    	    	              	        const data = await response.json();
+
+                                                                                                                                    	    	              	            if (data && data.verses) {
+                                                                                                                                    	    	              	            	      let html = `<h3>${data.reference}</h3>`;
+                                                                                                                                    	    	              	            	            data.verses.forEach(v => {
+                                                                                                                                    	    	              	            	            	        html += `<p>${v.text}</p>`;
+                                                                                                                                    	    	              	            	            	              });
+                                                                                                                                    	    	              	            	            	                    contentDiv.innerHTML = html;
+                                                                                                                                    	    	              	            	            	                        } else {
+                                                                                                                                    	    	              	            	            	                        	      contentDiv.innerHTML = "<p>No results found. Try a different reference.</p>";
+                                                                                                                                    	    	              	            	            	                        	          }
+                                                                                                                                    	    	              	            	            	                        	            } catch (err) {
+                                                                                                                                    	    	              	            	            	                        	            	    contentDiv.innerHTML = "<p>Error fetching Bible verse. Try again later.</p>";
+                                                                                                                                    	    	              	            	            	                        	            	        console.error(err);
+                                                                                                                                    	    	              	            	            	                        	            	          }
+                                                                                                                                    	    	              	            	            	                        	            	          });
+                                                                                                                                    	    	              	            	            	                        	            }
+                                                                                                                                    	    	              	            	            	                        }
+                                                                                                                                    	    	              	            	            })
+                                                                                                                                    	    	              	            }
+                                                                                                                                    	    	              }
+                                                                                                                                    	    }
+                                                                                                                                    })
+                                                                                                                                  </script>
+
+                                                                                                                                  </body>
+                                                                                                                                  </html>

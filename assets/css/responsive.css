@@ -1,0 +1,50 @@
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-content h2 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  section {
+    padding: 60px 20px;
+  }
+
+  section h2 {
+    font-size: 28px;
+  }
+
+}
+
+/* ================= SMALL PHONES ================= */
+@media (max-width: 480px) {
+
+  .hero {
+    height: auto;
+    padding-bottom: 60px;
+  }
+
+  .hero-content h2 {
+    font-size: 26px;
+  }
+
+  .btn {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+
+}

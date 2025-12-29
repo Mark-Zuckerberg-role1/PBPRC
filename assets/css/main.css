@@ -1,0 +1,626 @@
+/* ================= ROOT COLORS ================= */
+:root {
+  --primary: #1e3a8a;      /* Royal Blue */
+  --secondary: #facc15;    /* Gold */
+  --dark: #0f172a;         /* Deep Heaven Night */
+  --light: #ffffff;
+  --gray: #f1f5f9;
+}
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+body {
+  background: var(--gray);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* ================= HERO ================= */
+.hero {
+  height: 100vh;
+  background:
+    linear-gradient(
+      rgba(30, 58, 138, 0.75),
+      rgba(15, 23, 42, 0.85)
+    ),
+    url("https://i.postimg.cc/ZKp3WvcV/FB-IMG-1766959693898.jpg") center/cover no-repeat;}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 50px;
+}
+
+.logo {
+  color: var(--secondary);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: var(--light);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: var(--secondary);
+  bottom: -5px;
+  left: 0;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+
+.donate-btn {
+  background: var(--secondary);
+  color: var(--dark) !important;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+/* ================= HERO CONTENT ================= */
+.hero-content {
+  height: calc(100% - 90px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--light);
+  padding: 0 20px;
+}
+
+.hero-content h2 {
+  font-size: 48px;
+  max-width: 800px;
+  margin-bottom: 15px;
+}
+
+7.hero-content p {
+  font-size: 18px;
+  max-width: 650px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background: var(--secondary);
+  color: var(--dark);
+  padding: 14px 35px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(250, 204, 21, 0.4);
+  transition: transform 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+/* ================= SECTIONS ================= */
+section {
+  padding: 80px 25px;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 36px;
+  color: var(--primary);
+  margin-bottom: 25px;
+}
+
+section p {
+  text-align: center;
+  max-width: 720px;
+  margin: auto;
+  font-size: 16px;
+}
+
+/* ================= MINISTRIES ================= */
+.ministry-grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.ministry-card {
+  background: var(--light);
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(30, 58, 138, 0.15);
+  transition: transform 0.3s;
+}
+
+.ministry-card:hover {
+  transform: translateY(-8px);
+}
+
+.ministry-card h3 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+/* ================= SERVICES ================= */
+.service-list {
+  list-style: none;
+  text-align: center;
+}
+
+.service-list li {
+  margin: 12px 0;
+  font-size: 16px;
+}
+
+/* ================= LIVE & WHATSAPP ================= */
+.live, .whatsapp {
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--dark)
+  );
+  color: var(--light);
+  text-align: center;
+}
+
+.live h2, .whatsapp h2 {
+  color: var(--secondary);
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: var(--dark);
+  color: #cbd5f5;
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+}
+/* ================= CONTACT PREVIEW / MAP ================= */
+.contact-preview {
+	  text-align: center;
+	    padding: 80px 20px;
+	      background:
+	        linear-gradient(
+	        	    rgba(30, 58, 138, 0.75),
+	        	        rgba(15, 23, 42, 0.85)
+	        	          ),
+	        	            url("https://i.postimg.cc/CxxgP1N3/f26e690c5c5a0ddfb9504ffd42e89592.jpg' border='0' ")
+	        	              center/cover no-repeat;
+	        )
+	      }
+
+	      .contact-preview h2 {
+	      	  color: #1e3a8a; /* Royal Blue */
+	      	    margin-bottom: 20px;
+	      	    }
+
+	      	    .contact-preview p {
+	      	    	  max-width: 700px;
+	      	    	    margin: auto 0 30px auto;
+	      	    	      font-size: 16px;
+	      	    	      }
+
+	      	    	      .map-container {
+	      	    	      	  width: 100%;
+	      	    	      	    border-radius: 12px;
+	      	    	      	      overflow: hidden;
+	      	    	      	        box-shadow: 0 10px 25px rgba(30, 58, 138, 0.1);
+	      	    	      	        }
+	      	    	      }
+	      	    }
+	      }
+}
+/* ================= PRAYER FORM ================= */
+.prayer-form-section {
+	  padding: 80px 20px;
+	    text-align: center;
+	     background:
+	       linear-gradient(
+	       	    rgba(30, 58, 138, 0.75),
+	       	        rgba(15, 23, 42, 0.85)
+	       	          ),
+	       	            url("https://i.postimg.cc/ZKp3WvcV/FB-IMG-1766959693898.jpg")
+	       	              center/cover no-repeat;
+	       )
+	      }
+
+	      .prayer-form-section h2 {
+	      	  color: var(--primary);
+	      	    margin-bottom: 20px;
+	      	    }
+
+	      	    .prayer-form-section p {
+	      	    	  margin-bottom: 30px;
+	      	    	    font-size: 16px;
+	      	    	    }
+
+	      	    	    .prayer-form {
+	      	    	    	  max-width: 600px;
+	      	    	    	    margin: auto;
+	      	    	    	      display: flex;
+	      	    	    	        flex-direction: column;
+	      	    	    	          gap: 15px;
+	      	    	    	          }
+
+	      	    	    	          .prayer-form input,
+	      	    	    	          .prayer-form textarea {
+	      	    	    	          	  padding: 12px 15px;
+	      	    	    	          	    border-radius: 8px;
+	      	    	    	          	      border: 1px solid #ccc;
+	      	    	    	          	        font-size: 16px;
+	      	    	    	          	          width: 100%;
+	      	    	    	          	          }
+
+	      	    	    	          	          .prayer-form input:focus,
+	      	    	    	          	          .prayer-form textarea:focus {
+	      	    	    	          	          	  border-color: var(--primary);
+	      	    	    	          	          	    outline: none;
+	      	    	    	          	          	    }
+
+	      	    	    	          	          	    .prayer-form button {
+	      	    	    	          	          	    	  background: var(--secondary);
+	      	    	    	          	          	    	    color: var(--dark);
+	      	    	    	          	          	    	      padding: 14px 35px;
+	      	    	    	          	          	    	        border-radius: 40px;
+	      	    	    	          	          	    	          font-weight: 600;
+	      	    	    	          	          	    	            cursor: pointer;
+	      	    	    	          	          	    	              transition: transform 0.3s;
+	      	    	    	          	          	    	              }
+
+	      	    	    	          	          	    	              .prayer-form button:hover {
+	      	    	    	          	          	    	              	  transform: translateY(-3px);
+	      	    	    	          	          	    	              	  }
+	      	    	    	          	          	    	              }
+	      	    	    	          	          	    }
+	      	    	    	          	          }
+	      	    	    	          }
+	      	    	    }
+	      	    }
+	      }
+}
+/* ================= SERMONS GRID ================= */
+.sermons-section {
+	  padding: 80px 20px;
+	    background:
+	      linear-gradient(
+	      	    rgba(30, 58, 138, 0.75),
+	      	        rgba(15, 23, 42, 0.85)
+	      	          ),
+	      	            url("https://i.postimg.cc/ZKp3WvcV/FB-IMG-1766959693898.jpg")
+	      	              center/cover no-repeat;
+	      )
+	      text-align: center;
+	      }
+
+	      .sermons-section h2 {
+	      	  color: var(--primary);
+	      	    margin-bottom: 20px;
+	      	    }
+
+	      	    .sermons-section p {
+	      	    	  margin-bottom: 40px;
+	      	    	    font-size: 16px;
+	      	    	    }
+
+	      	    	    .sermon-grid {
+	      	    	    	  display: grid;
+	      	    	    	    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	      	    	    	      gap: 30px;
+	      	    	    	      }
+
+	      	    	    	      .sermon-card {
+	      	    	    	      	  background: #fff;
+	      	    	    	      	    border-radius: 12px;
+7	      	    	    	      	      padding: 15px;
+	      	    	    	      	        box-shadow: 0 10px 25px rgba(30, 58, 138, 0.1);
+	      	    	    	      	        }
+
+	      	    	    	      	        .sermon-card h3 {
+	      	    	    	      	        	  margin-top: 15px;
+	      	    	    	      	        	    color: var(--primary);
+	      	    	    	      	        	    }
+
+	      	    	    	      	        	    .sermon-card p {
+	      	    	    	      	        	    	  font-size: 14px;
+	      	    	    	      	        	    	    color: #555;
+	      	    	    	      	        	    	    }
+	      	    	    	      	        	    }
+	      	    	    	      	        }
+	      	    	    	      }
+	      	    	    }
+	      	    }
+	      }
+}
+/* ================= BLOG GRID ================= */
+.blog-section {
+	  padding: 80px 20px;
+	    text-align: center;
+	     background:
+	       linear-gradient(
+	       	    rgba(30, 58, 138, 0.75),
+	       	        rgba(15, 23, 42, 0.85)
+	       	          ),
+	       	            url("https://i.postimg.cc/ZKp3WvcV/FB-IMG-1766959693898.jpg")
+	       	              center/cover no-repeat;
+	       )
+	      }
+
+	      .blog-section h2 {
+	      	  color: var(--primary);
+	      	    margin-bottom: 20px;
+	      	    }
+
+	      	    .blog-section p {
+	      	    	  margin-bottom: 40px;
+	      	    	    font-size: 16px;
+	      	    	    }
+
+	      	    	    .blog-grid {
+	      	    	    	  display: grid;
+	      	    	    	    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	      	    	    	      gap: 30px;
+	      	    	    	      }
+
+	      	    	    	      .blog-card {
+	      	    	    	      	  background: #fff;
+	      	    	    	      	    border-radius: 12px;
+	      	    	    	      	      overflow: hidden;
+	      	    	    	      	        box-shadow: 0 10px 25px rgba(30, 58, 138, 0.1);
+	      	    	    	      	          display: flex;
+	      	    	    	      	            flex-direction: column;
+	      	    	    	      	              text-align: left;
+	      	    	    	      	              }
+
+	      	    	    	      	              .blog-card img {
+	      	    	    	      	              	  width: 100%;
+	      	    	    	      	              	    height: 180px;
+	      	    	    	      	              	      object-fit: cover;
+	      	    	    	      	              	      }
+
+	      	    	    	      	              	      .blog-card h3 {
+	      	    	    	      	              	      	  margin: 15px;
+	      	    	    	      	              	      	    color: var(--primary);
+	      	    	    	      	              	      	    }
+
+	      	    	    	      	              	      	    .blog-card p {
+	      	    	    	      	              	      	    	  margin: 0 15px 15px 15px;
+	      	    	    	      	              	      	    	    font-size: 14px;
+	      	    	    	      	              	      	    	      color: #555;
+	      	    	    	      	              	      	    	      }
+
+	      	    	    	      	              	      	    	      .blog-card .btn {
+	      	    	    	      	              	      	    	      	  margin: 0 15px 15px 15px;
+	      	    	    	      	              	      	    	      	    align-self: start;
+	      	    	    	      	              	      	    	      	      padding: 10px 20px;
+	      	    	    	      	              	      	    	      	        font-size: 14px;
+	      	    	    	      	              	      	    	      	        }
+	      	    	    	      	              	      	    	      }
+	      	    	    	      	              	      	    }
+	      	    	    	      	              	      }
+	      	    	    	      	              }
+	      	    	    	      }
+	      	    	    }
+	      	    }
+	      }
+}
+/* ================= PHOTO GALLERY ================= */
+.gallery-section {
+	  padding: 80px 20px;
+	    text-align: center;
+	     background:
+	       linear-gradient(
+	       	    rgba(30, 58, 138, 0.75),
+	       	        rgba(15, 23, 42, 0.85)
+	       	          ),
+	       	            url("https://i.postimg.cc/ZKp3WvcV/FB-IMG-1766959693898.jpg")
+	       	              center/cover no-repeat;
+	       )
+	      }
+
+	      .gallery-section h2 {
+	      	  color: var(--primary);
+	      	    margin-bottom: 20px;
+	      	    }
+
+	      	    .gallery-section p {
+	      	    	  margin-bottom: 40px;
+	      	    	    font-size: 16px;
+	      	    	    }
+
+	      	    	    .gallery-grid {
+	      	    	    	  display: grid;
+	      	    	    	    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	      	    	    	      gap: 20px;
+	      	    	    	      }
+
+	      	    	    	      .gallery-card {
+	      	    	    	      	  position: relative;
+	      	    	    	      	    overflow: hidden;
+	      	    	    	      	      border-radius: 12px;
+	      	    	    	      	        cursor: pointer;
+	      	    	    	      	          box-shadow: 0 10px 25px rgba(30, 58, 138, 0.1);
+	      	    	    	      	            transition: transform 0.3s, box-shadow 0.3s;
+	      	    	    	      	            }
+
+	      	    	    	      	            .gallery-card img {
+	      	    	    	      	            	  width: 100%;
+	      	    	    	      	            	    height: 200px;
+	      	    	    	      	            	      object-fit: cover;
+	      	    	    	      	            	        transition: transform 0.3s;
+	      	    	    	      	            	        }
+
+	      	    	    	      	            	        .gallery-card:hover img {
+	      	    	    	      	            	        	  transform: scale(1.1);
+	      	    	    	      	            	        	  }
+
+	      	    	    	      	            	        	  .gallery-card:hover {
+	      	    	    	      	            	        	  	  box-shadow: 0 15px 35px rgba(30, 58, 138, 0.2);
+	      	    	    	      	            	        	  	  }
+	      	    	    	      	            	        	  }
+	      	    	    	      	            	        }
+	      	    	    	      	            }
+	      	    	    	      }
+	      	    	    }
+	      	    }
+	      }
+}
+/* ================= INTERACTIVE BIBLE ================= */
+.bible-section {
+	  padding: 80px 20px;
+	    text-align: center;
+	    background:                                                                                     28     linear-gradient(                                                                              29       rgba(30, 58, 138, 0.75),                                                                    30       rgba(15, 23, 42, 0.85)                                                                      31     ),                                                                                            32     url("https://i.postimg.cc/ZKp3WvcV/FB-IMG-1766959693898.jpg") center/cover no-repeat;}        33
+	      }
+
+	      .bible-section h2 {
+	      	  color: var(--primary);
+	      	    margin-bottom: 20px;
+	      	    }
+
+	      	    .bible-section p {
+	      	    	  margin-bottom: 30px;
+	      	    	    font-size: 16px;
+	      	    	    }
+
+	      	    	    .bible-container {
+	      	    	    	  max-width: 800px;
+	      	    	    	    margin: auto;
+	      	    	    	      display: flex;
+	      	    	    	        flex-direction: column;
+	      	    	    	          gap: 15px;
+	      	    	    	          }
+
+	      	    	    	          #bible-search {
+	      	    	    	          	  padding: 12px 15px;
+	      	    	    	          	    border-radius: 8px;
+	      	    	    	          	      border: 1px solid #ccc;
+	      	    	    	          	        font-size: 16px;
+	      	    	    	          	        }
+
+	      	    	    	          	        #bible-search:focus {
+	      	    	    	          	        	  border-color: var(--primary);
+	      	    	    	          	        	    outline: none;
+	      	    	    	          	        	    }
+
+	      	    	    	          	        	    #bible-content {
+	      	    	    	          	        	    	  text-align: left;
+	      	    	    	          	        	    	    background: #fff;
+	      	    	    	          	        	    	      padding: 20px;
+	      	    	    	          	        	    	        border-radius: 12px;
+	      	    	    	          	        	    	          max-height: 400px;
+	      	    	    	          	        	    	            overflow-y: auto;
+	      	    	    	          	        	    	              box-shadow: 0 10px 25px rgba(30, 58, 138, 0.1);
+	      	    	    	          	        	    	              }
+	      	    	    	          	        	    }
+	      	    	    	          	        }
+	      	    	    	          }
+	      	    	    }
+	      	    }
+	      }
+}
+/* Navbar Links Hover */
+.nav-links li a {
+	  transition: color 0.3s, transform 0.2s;
+	  }
+
+	  .nav-links li a:hover {
+	  	  color: var(--secondary);
+	  	    transform: scale(1.1);
+	  	    }
+
+	  	    /* Buttons Hover */
+	  	    .btn {
+	  	    	  transition: all 0.3s ease;
+	  	    	  }
+
+	  	    	  .btn:hover {
+	  	    	  	  background: var(--secondary);
+	  	    	  	    color: #fff;
+	  	    	  	      transform: translateY(-3px) scale(1.05);
+	  	    	  	        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+	  	    	  	        }
+	  	    	  	        /* Hero Overlay Animation */
+	  	    	  	        .hero-content {
+	  	    	  	        	  opacity: 0;
+	  	    	  	        	    transform: translateY(30px);
+	  	    	  	        	      animation: fadeSlide 1s forwards;
+	  	    	  	        	        animation-delay: 0.5s;
+	  	    	  	        	        }
+
+	  	    	  	        	        @keyframes fadeSlide {
+	  	    	  	        	        	  to {
+	  	    	  	        	        	  	    opacity: 1;
+	  	    	  	        	        	  	        transform: translateY(0);
+	  	    	  	        	        	  	          }
+	  	    	  	        	        	  	          }
+	  	    	  	        	        	  }
+	  	    	  	        	        }
+	  	    	  	        	        /* Card Lift on Hover */
+	  	    	  	        	        .ministry-card,
+	  	    	  	        	        .blog-card,
+	  	    	  	        	        .gallery-card,
+	  	    	  	        	        .sermon-card {
+	  	    	  	        	        	  transition: transform 0.3s, box-shadow 0.3s;
+	  	    	  	        	        	  }
+
+	  	    	  	        	        	  .ministry-card:hover,
+	  	    	  	        	        	  .blog-card:hover,
+	  	    	  	        	        	  .gallery-card:hover,
+	  	    	  	        	        	  .sermon-card:hover {
+	  	    	  	        	        	  	  transform: translateY(-8px) scale(1.02);
+	  	    	  	        	        	  	    box-shadow: 0 15px 35px rgba(30, 58, 138, 0.2);
+	  	    	  	        	        	  	    }
+	  	    	  	        	        	  }
+	  	    	  	        	        }
+	  	    	  	        }
+	  	    	  }
+	  	    }
+	  }
+}
+/* Fade In on Scroll */
+.fade-in {
+	  opacity: 0;
+	    transform: translateY(20px);
+	      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+	      }
+
+	      .fade-in.visible {
+	      	  opacity: 1;
+	      	    transform: translateY(0);
+	      	    }
+	      }
+}
+#bible-content p {
+	  animation: fadeText 0.5s ease-in-out;
+	  }
+
+	  @keyframes fadeText {
+	  	  from { opacity: 0; }
+	  	    to { opacity: 1; }
+	  	    }
+	  }
+}
