@@ -72,10 +72,10 @@
   var disqus_config = function () {
     this.page.url = window.location.href;
     this.page.identifier = document.title;
+
+    this.page.theme = "dark"; // 🔥 THIS IS THE FIX
   };
 
-    this.page.theme = "dark";
-}
   (function () {
     var d = document, s = d.createElement('script');
     s.src = 'https://pbprc-vercel-app.disqus.com/embed.js';
@@ -83,10 +83,6 @@
     (d.head || d.body).appendChild(s);
   })();
 </script>
-
-<noscript>
-  Please enable JavaScript to view the comments powered by Disqus.
-</noscript>
 
                                                                   <!-- BLOG SECTION -->
                                                                     <section class="blog-section">
