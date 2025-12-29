@@ -22,6 +22,70 @@
                                                               </ul>
                                                                 </nav>
 
+<!-- SHARE YOUR MIND SECTION -->
+<section class="share-mind-section">
+  <h2>Share Your Mind</h2>
+  <p>Your thoughts, testimonies, and reflections matter. Join the conversation below.</p>
+
+  <!-- Disqus Container -->
+  <div id="disqus_thread"></div>
+</section>
+
+<!-- INLINE CSS -->
+<style>
+  .share-mind-section {
+    padding: 80px 20px;
+    background: linear-gradient(
+      rgba(15, 23, 42, 0.95),
+      rgba(2, 6, 23, 0.95)
+    );
+    color: #f1f5f9;
+    text-align: center;
+  }
+
+  .share-mind-section h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #eab308; /* soft gold */
+    letter-spacing: 1px;
+  }
+
+  .share-mind-section p {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 16px;
+    color: #cbd5f5;
+    line-height: 1.6;
+  }
+
+  #disqus_thread {
+    max-width: 900px;
+    margin: auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+  }
+</style>
+
+<!-- DISQUS SCRIPT -->
+<script>
+  var disqus_config = function () {
+    this.page.url = window.location.href;
+    this.page.identifier = document.title;
+  };
+
+  (function () {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://pbprc-vercel-app.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+
+<noscript>
+  Please enable JavaScript to view the comments powered by Disqus.
+</noscript>
+
                                                                   <!-- BLOG SECTION -->
                                                                     <section class="blog-section">
                                                                         <h2>Church News & Updates</h2>
