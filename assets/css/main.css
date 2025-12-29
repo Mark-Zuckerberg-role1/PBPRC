@@ -306,6 +306,7 @@ section p {
 /* ================= SERMONS GRID ================= */
 .sermons-section {
 	  padding: 80px 20px;
+    color: #020617;
 	    background:
 	      linear-gradient(
 	      	    rgba(30, 58, 138, 0.75),
@@ -318,7 +319,7 @@ section p {
 	      }
 
 	      .sermons-section h2 {
-	      	  color: #020617;
+	      	  color: var(--primary);
 	      	    margin-bottom: 20px;
 	      	    }
 
@@ -359,6 +360,7 @@ section p {
 /* ================= BLOG GRID ================= */
 .blog-section {
 	  padding: 80px 20px;
+    color:#020617;
 	    text-align: center;
 	     background:
 	       linear-gradient(
@@ -371,7 +373,7 @@ section p {
 	      }
 
 	      .blog-section h2 {
-	      	  color: #020617;
+	      	  color: var(--primary);
 	      	    margin-bottom: 20px;
 	      	    }
 
@@ -432,6 +434,7 @@ section p {
 .gallery-section {
 	  padding: 80px 20px;
 	    text-align: center;
+      color: #020617;
 	     background:
 	       linear-gradient(
 	       	    rgba(30, 58, 138, 0.75),
@@ -443,7 +446,7 @@ section p {
 	      }
 
 	      .gallery-section h2 {
-	      	  color: #020617;
+	      	  color: var(--primary);
 	      	    margin-bottom: 20px;
 	      	    }
 
@@ -493,11 +496,12 @@ section p {
 .bible-section {
 	  padding: 80px 20px;
 	    text-align: center;
+      color: #020617;
 	    background:                                                                                     28     linear-gradient(                                                                              29       rgba(30, 58, 138, 0.75),                                                                    30       rgba(15, 23, 42, 0.85)                                                                      31     ),                                                                                            32     url("https://i.postimg.cc/ZKp3WvcV/FB-IMG-1766959693898.jpg") center/cover no-repeat;}        33
 	      }
 
 	      .bible-section h2 {
-	      	  color: #020617;
+	      	  color: var(primary);
 	      	    margin-bottom: 20px;
 	      	    }
 
